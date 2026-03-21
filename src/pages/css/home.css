@@ -1,0 +1,144 @@
+@reference "tailwindcss";
+
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Syne:wght@600;700;800&display=swap');
+
+/* ─── Layout grid ───────────────────────────────────────────── */
+.home__grid {
+  @apply grid grid-cols-1 lg:grid-cols-2 gap-8 px-6 lg:px-16 pt-28 pb-16
+         bg-gradient-to-r from-[#0d1224] to-[#0a0d37];
+}
+
+/* ─── Left ──────────────────────────────────────────────────── */
+.home__left {
+  @apply flex flex-col justify-center gap-3;
+  font-family: 'Syne', sans-serif;
+}
+.home__greeting {
+  @apply text-gray-400 text-sm tracking-widest uppercase;
+  font-family: 'Fira Code', monospace;
+}
+.home__name {
+  @apply text-white text-4xl lg:text-6xl font-extrabold leading-tight;
+}
+.home__title {
+  @apply text-amber-300 text-sm lg:text-base tracking-wide;
+  font-family: 'Fira Code', monospace;
+}
+
+/* ─── Button group ──────────────────────────────────────────── */
+.home__btn-group {
+  @apply flex flex-wrap gap-3 mt-3;
+}
+.home__resume-btn {
+  @apply inline-flex items-center gap-2
+         px-6 py-2.5 rounded
+         text-xs font-medium tracking-widest uppercase
+         no-underline transition-all duration-300;
+  font-family: 'Fira Code', monospace;
+}
+.home__resume-btn--outline {
+  @apply text-white border border-violet-500
+         bg-gradient-to-r from-pink-500/10 to-violet-600/10
+         hover:from-pink-500/30 hover:to-violet-600/30
+         hover:border-pink-400 hover:shadow-lg hover:shadow-violet-500/20;
+}
+.home__resume-btn--filled {
+  @apply text-[#0d1224] bg-gradient-to-r from-pink-500 to-violet-600
+         border border-transparent
+         hover:from-pink-400 hover:to-violet-500
+         hover:shadow-lg hover:shadow-violet-500/30;
+}
+
+/* ─── Right ─────────────────────────────────────────────────── */
+.home__right {
+  @apply flex items-center justify-center;
+}
+
+/* ─── Code card ─────────────────────────────────────────────── */
+.home__card {
+  @apply relative rounded-lg border w-full
+         bg-gradient-to-r from-[#0d1224] to-[#0a0d37]
+         border-[#1b2c68a0];
+}
+.home__card-line {
+  @apply flex flex-row h-[1px] w-full;
+}
+.home__card-line--left {
+  @apply h-[1px] w-full bg-gradient-to-r from-transparent via-pink-500 to-violet-600;
+}
+.home__card-line--right {
+  @apply h-[1px] w-full bg-gradient-to-r from-violet-600 to-transparent;
+}
+.home__card-dots {
+  @apply flex items-center flex-row gap-2 px-4 lg:px-8 py-4;
+}
+.home__dot {
+  @apply h-3 w-3 rounded-full;
+}
+.home__dot--red    { @apply bg-red-400; }
+.home__dot--orange { @apply bg-orange-400; }
+.home__dot--green  { @apply bg-green-200; }
+.home__card-filename {
+  @apply ml-auto text-xs text-violet-400;
+  font-family: 'Fira Code', monospace;
+}
+.home__card-code {
+  @apply overflow-hidden border-t-[2px] border-indigo-900
+         px-4 lg:px-8 py-4 lg:py-8;
+}
+.home__code {
+  @apply font-mono text-xs md:text-sm lg:text-base;
+  font-family: 'Fira Code', monospace;
+}
+
+/* ─── Syntax tokens ─────────────────────────────────────────── */
+.c-keyword { @apply text-pink-500 mr-1; }
+.c-var     { @apply text-white; }
+.c-value   { @apply text-amber-300; }
+.c-bool    { @apply text-orange-400; }
+.c-green   { @apply text-green-400; }
+.c-cyan    { @apply text-cyan-400; }
+.c-white   { @apply text-white; }
+.c-gray    { @apply text-gray-400; }
+.c-key     { @apply text-sky-400; }
+.c-fn      { @apply text-green-400; }
+.c-string  { @apply text-amber-300; }
+.c-orange  { @apply text-orange-400; }
+.c-pink    { @apply text-pink-500; }
+
+/* ─── Indentation ───────────────────────────────────────────── */
+.c-indent  { @apply ml-4 lg:ml-8 mr-1; }
+.c-indent2 { @apply ml-8 lg:ml-16 mr-1; }
+.c-indent3 { @apply ml-12 lg:ml-24; }
+
+/* ─── Shared section heading ────────────────────────────────── */
+.section__heading {
+  @apply relative flex justify-center items-center mb-12;
+}
+.section__line--left {
+  @apply absolute left-0 right-1/2 h-[1px]
+         bg-gradient-to-r from-transparent via-pink-500 to-violet-600;
+}
+.section__line--right {
+  @apply absolute left-1/2 right-0 h-[1px]
+         bg-gradient-to-r from-violet-600 to-transparent;
+}
+.section__title {
+  @apply relative z-10 text-white text-2xl lg:text-3xl font-bold
+         bg-gradient-to-r from-[#0d1224] to-[#0a0d37] px-6;
+  font-family: 'Fira Code', monospace;
+}
+.section__dot {
+  @apply text-pink-500;
+}
+
+/* ─── Blinking cursor ───────────────────────────────────────── */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+.blink::after {
+  content: '|';
+  @apply text-pink-500 ml-1;
+  animation: blink 1s step-end infinite;
+}

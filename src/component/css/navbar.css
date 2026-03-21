@@ -1,0 +1,63 @@
+@reference "tailwindcss";
+
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Syne:wght@600;700;800&display=swap');
+
+/* ─── Wrapper ──────────────────────────────────────────────── */
+.navbar {
+  @apply fixed top-0 left-0 right-0 z-50
+         bg-gradient-to-r from-[#0d1224] to-[#0a0d37]
+         border-b border-[#1b2c68a0];
+  font-family: 'Fira Code', monospace;
+}
+
+/* ─── Pink → Violet top line ────────────────────────────────── */
+.navbar__gradient-line {
+  @apply flex flex-row h-px w-full;
+}
+.navbar__gradient-line--left {
+  @apply h-px w-full bg-gradient-to-r from-transparent via-pink-500 to-violet-600;
+}
+.navbar__gradient-line--right {
+  @apply h-px w-full bg-gradient-to-r from-violet-600 to-transparent;
+}
+
+/* ─── Inner row ─────────────────────────────────────────────── */
+.navbar__inner {
+  @apply flex items-center justify-between px-6 lg:px-10 py-3;
+}
+
+/* ─── Brand ─────────────────────────────────────────────────── */
+.navbar__brand {
+  @apply flex items-center gap-2;
+}
+.navbar__brand-icon {
+  @apply text-pink-500;
+}
+.navbar__name {
+  @apply text-white font-bold text-sm tracking-tight;
+  font-family: 'Syne', sans-serif;
+}
+.navbar__separator {
+  @apply text-indigo-500 font-light select-none;
+}
+.navbar__profession {
+  @apply hidden sm:inline text-[11px] text-amber-300 tracking-widest uppercase;
+}
+
+.navbar__links {
+  @apply flex items-center gap-1 list-none m-0 p-0;
+}
+.navbar__link {
+  @apply flex items-center gap-0.5 px-3 py-1.5 rounded
+         text-xs text-gray-400 transition-all duration-200
+         no-underline hover:text-white hover:bg-indigo-900/40;
+}
+.navbar__link-slash {
+  @apply text-pink-500 mr-0.5 font-light;
+}
+.navbar__link--active {
+  @apply text-white bg-indigo-900/50;
+}
+.navbar__link--active .navbar__link-slash {
+  @apply text-violet-400;
+}

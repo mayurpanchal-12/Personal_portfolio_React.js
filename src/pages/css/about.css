@@ -1,0 +1,189 @@
+@reference "tailwindcss";
+
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Syne:wght@600;700;800&display=swap');
+
+/* ─── Page wrapper ──────────────────────────────────────────── */
+.about-page {
+  @apply min-h-screen bg-gradient-to-r from-[#0d1224] to-[#0a0d37];
+  font-family: 'Fira Code', monospace;
+}
+
+/* ─── Shared sub-title ──────────────────────────────────────── */
+.about-page__sub-title {
+  @apply text-white text-lg lg:text-xl font-bold mb-6;
+  font-family: 'Fira Code', monospace;
+}
+
+/* ════════════════ HERO ════════════════ */
+.about-page__hero {
+  @apply px-6 lg:px-16 pt-24 pb-16 border-b border-[#1b2c68a0];
+}
+.about-page__hero-line {
+  @apply flex flex-row h-[1px] w-full mb-10;
+}
+.about-page__hero-line--left {
+  @apply h-[1px] w-full bg-gradient-to-r from-transparent via-pink-500 to-violet-600;
+}
+.about-page__hero-line--right {
+  @apply h-[1px] w-full bg-gradient-to-r from-violet-600 to-transparent;
+}
+
+/* profile row */
+.about-page__profile {
+  @apply grid grid-cols-1 lg:grid-cols-2 gap-10 items-center mb-14;
+}
+.about-page__img-wrap {
+  @apply relative flex justify-center items-center;
+}
+.about-page__img-glow {
+  @apply absolute w-60 h-60 rounded-full bg-violet-600/20 blur-3xl;
+}
+.about-page__img {
+  @apply relative z-10 w-52 h-52 lg:w-64 lg:h-64
+         rounded-lg object-cover border border-[#1b2c68a0];
+}
+.about-page__img-offset {
+  @apply absolute z-0 w-52 h-52 lg:w-64 lg:h-64
+         rounded-lg border border-pink-500/30 translate-x-3 translate-y-3;
+}
+.about-page__info {
+  @apply flex flex-col gap-4;
+}
+.about-page__greeting {
+  @apply text-sm lg:text-base;
+}
+.about-page__role {
+  @apply text-amber-300 text-sm tracking-widest uppercase;
+}
+.about-page__bio {
+  @apply text-gray-400 text-sm leading-relaxed border-l-2 border-indigo-900 pl-4;
+}
+.about-page__tags {
+  @apply flex flex-wrap gap-2;
+}
+.about-page__tag {
+  @apply text-xs px-3 py-1 rounded text-amber-300 border border-indigo-900 bg-indigo-900/20;
+}
+
+/* education timeline */
+.about-page__edu { @apply mt-4; }
+.about-page__timeline {
+  @apply flex flex-col border-l-2 border-indigo-900 ml-2;
+}
+.about-page__timeline-item {
+  @apply relative flex gap-6 pb-8;
+}
+.about-page__timeline-marker {
+  @apply absolute -left-[9px] top-1.5
+         w-4 h-4 rounded-full border-2 border-pink-500 bg-[#0d1224];
+}
+.about-page__timeline-marker--cert {
+  @apply border-amber-400;
+}
+.about-page__timeline-card {
+  @apply ml-6 flex flex-col gap-1 rounded-lg border border-[#1b2c68a0]
+         bg-gradient-to-r from-[#0d1224] to-[#0a0d37] px-5 py-4 w-full;
+}
+.about-page__timeline-year     { @apply text-xs text-violet-400; }
+.about-page__timeline-degree   { @apply text-white font-bold text-sm; font-family: 'Syne', sans-serif; }
+.about-page__timeline-institute{ @apply text-gray-400 text-xs; }
+.about-page__timeline-grade    { @apply text-amber-300 text-xs mt-1; }
+
+/* ════════════════ CONTACT ════════════════ */
+.about-page__contact {
+  @apply px-6 lg:px-16 py-14 border-b border-[#1b2c68a0];
+}
+.about-page__contact-grid {
+  @apply grid grid-cols-1 lg:grid-cols-2 gap-8
+         rounded-lg border border-[#1b2c68a0]
+         bg-gradient-to-r from-[#0d1224] to-[#0a0d37] px-6 py-8;
+}
+.about-page__contact-text {
+  @apply text-gray-400 text-sm leading-relaxed border-l-2 border-indigo-900 pl-4 self-start;
+}
+.about-page__contact-links { @apply flex flex-col gap-3; }
+.about-page__contact-link {
+  @apply flex items-center gap-3 text-sm no-underline
+         transition-opacity duration-200 hover:opacity-75;
+}
+.about-page__contact-label { @apply text-green-400 w-20 shrink-0; }
+.about-page__contact-value { @apply text-amber-300; }
+
+/* ════════════════ PROJECTS ════════════════ */
+.about-page__projects { @apply px-6 lg:px-16 py-14; }
+.about-page__projects-grid {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6;
+}
+
+/* card */
+.about-page__card {
+  @apply rounded-lg border border-[#1b2c68a0]
+         bg-gradient-to-r from-[#0d1224] to-[#0a0d37]
+         flex flex-col overflow-hidden
+         transition-all duration-300
+         hover:border-indigo-700 hover:shadow-lg hover:shadow-violet-900/20;
+}
+.about-page__card-line { @apply flex flex-row h-[1px] w-full; }
+.about-page__card-line--left {
+  @apply h-px w-full bg-linear-to-r from-transparent via-pink-500 to-violet-600;
+}
+.about-page__card-line--right {
+  @apply h-px w-full bg-linear-to-r from-violet-600 to-transparent;
+}
+.about-page__card-dots { @apply flex items-center gap-2 px-4 py-3; }
+.about-page__dot          { @apply w-3 h-3 rounded-full; }
+.about-page__dot--red     { @apply bg-red-400; }
+.about-page__dot--orange  { @apply bg-orange-400; }
+.about-page__dot--green   { @apply bg-green-200; }
+.about-page__card-filename {
+  @apply ml-auto text-xs text-violet-400 self-center;
+  font-family: 'Fira Code', monospace;
+}
+.about-page__card-body {
+  @apply flex flex-col gap-3 px-5 py-4 border-t-[2px] border-indigo-900;
+}
+.about-page__code {
+  @apply block text-xs lg:text-sm leading-6;
+  font-family: 'Fira Code', monospace;
+}
+
+/* syntax tokens */
+.cc-keyword { @apply text-pink-500; }
+.cc-var     { @apply text-white font-medium; }
+.cc-key     { @apply text-sky-400; }
+.cc-string  { @apply text-amber-300; }
+.cc-bool    { @apply text-orange-400; }
+.cc-fn      { @apply text-green-400; }
+.cc-gray    { @apply text-gray-400; }
+.cc-indent  { @apply ml-4 block; }
+.cc-indent2 { @apply ml-8 block; }
+.cc-link {
+  @apply text-violet-400 no-underline transition-colors duration-200 hover:text-violet-200;
+}
+.cc-link--live { @apply text-pink-500 hover:text-pink-300; }
+
+/* detail button */
+.about-page__detail-btn {
+  @apply mt-auto mx-0 text-left text-xs
+         px-5 py-2.5 rounded-none
+         border-t border-indigo-900
+         bg-indigo-950/30
+         transition-all duration-200 cursor-pointer
+         hover:bg-indigo-900/40 hover:text-white;
+  font-family: 'Fira Code', monospace;
+}
+
+/* ─── Syntax color tokens (shared across pages) ─────────────── */
+.c-pink    { @apply text-pink-500; }
+.c-keyword { @apply text-pink-500 mr-1; }
+.c-var     { @apply text-white mr-1; }
+.c-value   { @apply text-amber-300; }
+.c-gray    { @apply text-gray-400; }
+.c-key     { @apply text-sky-400; }
+.c-fn      { @apply text-green-400; }
+.c-string  { @apply text-amber-300; }
+.c-bool    { @apply text-orange-400; }
+.c-orange  { @apply text-orange-400; }
+.c-white   { @apply text-white font-medium; };
+
+
