@@ -74,3 +74,30 @@
 .about__meta-item  { @apply flex items-center gap-3 text-xs lg:text-sm; }
 .about__meta-label { @apply text-green-400 w-24 shrink-0; }
 .about__meta-value { @apply text-amber-300; }
+
+
+/* ── Toolkit ─────────────────────────────────────────── */
+.about__toolkit {
+  @apply rounded-lg border border-[#1b2c68a0]
+         bg-linear-to-r from-[#0d1224] to-[#0a0d37]
+         px-5 py-4;
+  font-family: 'Fira Code', monospace;
+}
+
+.about__toolkit-comment {
+  @apply block text-xs text-indigo-400/60 mb-3;
+}
+
+.about__toolkit-groups {
+  @apply flex flex-col gap-1;
+}
+
+.about__toolkit-row {
+  @apply flex flex-wrap items-center gap-x-1 text-xs lg:text-sm;
+}
+
+.about__toolkit-key    { @apply text-green-400; }
+.about__toolkit-colon  { @apply text-gray-500 mr-1; }
+.about__toolkit-bracket { @apply text-pink-500; }
+.about__toolkit-item   { @apply text-amber-300; }
+.about__toolkit-comma  { @apply text-gray-500; }

@@ -56,6 +56,51 @@ export default function Intro() {
             ))}
           </div>
 
+          
+<div className="about__toolkit">
+  <span className="about__toolkit-comment">{'< toolkit/>'}</span>
+  <div className="about__toolkit-groups">
+    {[
+      {
+        key: "ui",
+        label: "UI/UX",
+        items: ["react-toastify", "react-loading-skeleton", "lucide-react", "React-swiper"],
+      },
+      {
+        key: "integrations",
+        label: "Integrations",
+        items: ["EmailJS", "Clipboard API", "FileReader API"],
+      },
+      {
+        key: "advanced",
+        label: "Advanced",
+        items: ["Web Speech API", "Vite PWA", "jsPDF"],
+      },
+      {
+        key: "viz",
+        label: "Visualization",
+        items: ["Chart.js"],
+      },
+    ].map(({ key, label, items }) => (
+      <div key={key} className="about__toolkit-row">
+        <span className="about__toolkit-key">{label}</span>
+        <span className="about__toolkit-colon">:</span>
+        <span className="about__toolkit-bracket">[</span>
+        {items.map((item, i) => (
+          <span key={item}>
+            <span className="about__toolkit-item">"{item}"</span>
+            {i < items.length - 1 && (
+              <span className="about__toolkit-comma">, </span>
+            )}
+          </span>
+        ))}
+        <span className="about__toolkit-bracket">]</span>
+      </div>
+    ))}
+  </div>
+</div>
+
+
           <div className="about__meta">
             {[
               { label: "education", value: "BSC- Computer Science" },

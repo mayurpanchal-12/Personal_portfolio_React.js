@@ -4,7 +4,7 @@
 
 /* ─── Page wrapper ──────────────────────────────────────────── */
 .about-page {
-  @apply min-h-screen bg-gradient-to-r from-[#0d1224] to-[#0a0d37];
+  @apply min-h-screen  bg-linear-to-r from-[#0d1224] to-[#0a0d37];
   font-family: 'Fira Code', monospace;
 }
 
@@ -14,18 +14,17 @@
   font-family: 'Fira Code', monospace;
 }
 
-/* ════════════════ HERO ════════════════ */
 .about-page__hero {
   @apply px-6 lg:px-16 pt-24 pb-16 border-b border-[#1b2c68a0];
 }
 .about-page__hero-line {
-  @apply flex flex-row h-[1px] w-full mb-10;
+  @apply flex flex-row h-px w-full mb-10;
 }
 .about-page__hero-line--left {
-  @apply h-[1px] w-full bg-gradient-to-r from-transparent via-pink-500 to-violet-600;
+  @apply h-px w-full  bg-linear-to-r from-transparent via-pink-500 to-violet-600;
 }
 .about-page__hero-line--right {
-  @apply h-[1px] w-full bg-gradient-to-r from-violet-600 to-transparent;
+  @apply h-px w-full bg-linear-to-r from-violet-600 to-transparent;
 }
 
 /* profile row */
@@ -65,7 +64,6 @@
   @apply text-xs px-3 py-1 rounded text-amber-300 border border-indigo-900 bg-indigo-900/20;
 }
 
-/* education timeline */
 .about-page__edu { @apply mt-4; }
 .about-page__timeline {
   @apply flex flex-col border-l-2 border-indigo-900 ml-2;
@@ -82,14 +80,13 @@
 }
 .about-page__timeline-card {
   @apply ml-6 flex flex-col gap-1 rounded-lg border border-[#1b2c68a0]
-         bg-gradient-to-r from-[#0d1224] to-[#0a0d37] px-5 py-4 w-full;
+         bg-linear-to-r from-[#0d1224] to-[#0a0d37] px-5 py-4 w-full;
 }
 .about-page__timeline-year     { @apply text-xs text-violet-400; }
 .about-page__timeline-degree   { @apply text-white font-bold text-sm; font-family: 'Syne', sans-serif; }
 .about-page__timeline-institute{ @apply text-gray-400 text-xs; }
 .about-page__timeline-grade    { @apply text-amber-300 text-xs mt-1; }
 
-/* ════════════════ CONTACT ════════════════ */
 .about-page__contact {
   @apply px-6 lg:px-16 py-14 border-b border-[#1b2c68a0];
 }
@@ -109,7 +106,6 @@
 .about-page__contact-label { @apply text-green-400 w-20 shrink-0; }
 .about-page__contact-value { @apply text-amber-300; }
 
-/* ════════════════ PROJECTS ════════════════ */
 .about-page__projects { @apply px-6 lg:px-16 py-14; }
 .about-page__projects-grid {
   @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6;
@@ -123,7 +119,7 @@
          transition-all duration-300
          hover:border-indigo-700 hover:shadow-lg hover:shadow-violet-900/20;
 }
-.about-page__card-line { @apply flex flex-row h-[1px] w-full; }
+.about-page__card-line { @apply flex flex-row h-px w-full; }
 .about-page__card-line--left {
   @apply h-px w-full bg-linear-to-r from-transparent via-pink-500 to-violet-600;
 }

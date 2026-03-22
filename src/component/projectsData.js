@@ -6,7 +6,7 @@ export const projects = [
   name: "Wristly",
   desc: "Premium watch e-commerce app built with React.js and TailwindCSS.",
   longDesc: "A production-grade premium watch e-commerce application built with React, showcasing modern frontend practices, state management, and performance optimization.",
-  tech: ["React.js", "JavaScript (ES6+)", "Redux", "TailwindCSS", "Vite", "React Router DOM", "Local Storage", "Vercel"],
+  tech: ["React.js", "JavaScript (ES6+)", "Redux", "TailwindCSS", "Vite", "React Router DOM", "Local Storage","Vite PWA","Lucid-react", "react-toastify","swiper-slider","Skeleton-loading", "Vercel"],
   features: [
     "Filter, Search, and Sort products (combined logic)",
     "Product detail page with image gallery",
@@ -56,6 +56,7 @@ export const projects = [
     { name: "react-toastify", desc: "Toast notifications for user actions" },
     { name: "swiper", desc: "Hero slider and related products carousel" },
     { name: "react-loading-skeleton", desc: "Skeleton loading UI for better UX" },
+    {name:"Vite PWA" , desc:"PWA installation"}
   ],
   highlights: [
     { label: "Dark Mode", desc: "CSS variables + .dark on <html>, persists via localStorage, no flash on load" },
@@ -64,8 +65,13 @@ export const projects = [
     { label: "Performance", desc: "React.lazy + Suspense, React.memo, useCallback, useMemo to minimize re-renders" },
     { label: "PropTypes", desc: "Runtime prop validation on all components, catches bugs during development" },
     { label: "Error Boundary", desc: "Prevents full app crash, shows fallback UI on component errors" },
-    { label: "Responsive Design", desc: "320px to desktop, Tailwind + custom CSS, mobile-first layout" },
+    {label:"Sliders", desc:"swiper slider enhanced UI/UX"},
+    {label:"Skeleton-Loading" , desc:"enhanced UI/UX"},
+  
     { label: "Auth Flow", desc: "Signup / Login stored in localStorage, logout clears session only" },
+    {label:"Localstorage" , desc:"data remains after refresh"},
+    {label:"toast", desc:"Toast alerts using Toastify"},
+      { label: "Responsive Design", desc: "320px to desktop, Tailwind + custom CSS, mobile-first layout" },
   ],
   errorFlows: [
     {
@@ -113,7 +119,8 @@ export const projects = [
   "Browser Speech API",
   "Chart library",
   "CSV / PDF export utilities",
-  "Finance News API"
+  "Finance News API",
+  "Localstorage"
 ],
       features: ["Transaction Management , Filter & Search , Download-Csv & PDF" , "Schedule Transactions " , "Charts & Analytics" , "Summary" , "notes" , "News"],
      
@@ -149,6 +156,7 @@ techStack: [
   { name: "Chart.js", desc: "Dynamic line + pie charts for income/expense analysis" },
   { name: "Alpha Vantage API", desc: "Live finance news fetched via route loader" },
   { name: "localStorage", desc: "Transactions, filters and balance persisted across refresh" },
+  {name:"browser speech Api " , desc:"voice input"},
   { name: "Inter (Google Fonts)", desc: "Primary typeface across the entire UI" },
   { name: "Vite", desc: "Fast build tool with import.meta.env for API key" },
 ],
@@ -158,8 +166,10 @@ highlights: [
   { label: "Context + useReducer", desc: "Two reducers (transactions + filters) in one provider — clean dispatch pattern, no Redux needed" },
   { label: "Code Splitting", desc: "All pages are React.lazy with Suspense + PageLoader fallback — only loads what's needed" },
   { label: "Error Boundary", desc: "Wraps complex pages — prevents full app crash, shows fallback UI on render errors" },
+    { label: "CSV + PDF Export", desc: "DownloadDropdown lets users export transaction data in two formats" },
+      { label: "Charts", desc: "analytics with Overall balance - Line chart & Income- Expense with Pie chart" },
   { label: "Route-level Error Handling", desc: "News route uses errorElement: <NewsErrorPage /> for loader failures separate from ErrorBoundary" },
-  { label: "CSV + PDF Export", desc: "DownloadDropdown lets users export transaction data in two formats" },
+  {label:"Locatstorage" , desc:"Localstorage support"},
   { label: "Speech Input", desc: "useSpeechInput hook enables voice-to-text in the transaction form" },
   { label: "Responsive Design", desc: "Mobile-first layout using Tailwind, max-w-[1200px] centered root, flex-col gap structure" },
   { label: "Running Balance", desc: "Each filtered transaction gets a live-computed balance column via useMemo" },
@@ -221,6 +231,9 @@ errorFlows: [
   "HTML & Tailwind CSS",
   "localStorage",
   "Vercel",
+   "Web Speech API",
+   "FileReader API ",
+   "jsPDF",
   "GitHub"
 
 ],
@@ -233,6 +246,8 @@ errorFlows: [
   "Counts & Clear All",
   "Export Options",
   "Search Functionality",
+  "Attach PDF , image",
+  "Voice input"
 ],
 appFlow: [
   { text: "Open App → View all Todos grouped by due date" },
@@ -276,6 +291,7 @@ highlights: [
   { label: "Dark Mode", desc: "theme state in context, persisted to localStorage, @custom-variant dark in Tailwind v4" },
   { label: "Error Boundary", desc: "Wraps TodoList — catches render crashes, shows fallback UI with refresh prompt" },
   { label: "Download Disabled on Category Filter", desc: "CSV/PDF export blocked when categoryFilter is active to avoid partial data confusion" },
+  {label:"Localstorage" , desc:"data remains after refresh "}
 ],
 
 errorFlows: [
@@ -335,6 +351,7 @@ errorFlows: [
   "JavaScript (ES6+)",
   "HTML & Tailwind CSS",
   "LocalStorage",
+  "Web Clipboard API",
   "Vercel",
   "GitHub"
 ],
@@ -345,6 +362,7 @@ errorFlows: [
   "PWA support",
   "Copy to clipboard",
   "Theme toggle",
+  "Localstorage",
   "Password strength indicator",
   "Recent passwords",
   "Password history",
@@ -390,6 +408,8 @@ highlights: [
   { label: "Auto-generate on Change", desc: "generatePassword wrapped in useCallback, fires automatically via useEffect whenever length, char, or num changes" },
   { label: "History Cap", desc: "History sliced to last 10 entries on every generate — prevents unbounded localStorage growth" },
   { label: "Dark Mode", desc: "Theme component toggles .dark on <html>, Tailwind @custom-variant dark applies — no flash, no persistence bug (note: theme resets on refresh)" },
+  {label:"Copy" , desc:"Copy password to Clipboard"},
+  {label:"Localstorage" , desc:"Localstorage support"},
   { label: "Responsive Install Button", desc: "Two separate install buttons in Navbar — full pill button on sm+, icon-only circle on mobile" },
   { label: "Error Boundary", desc: "Wraps each route individually — Generator, History, Guide all isolated so one crash doesn't break the others" },
   { label: "404 Page", desc: "Wildcard route with Go Home + Go Back buttons, gradient 404 heading, glass card style matching app theme" },
@@ -444,7 +464,7 @@ errorFlows: [
   name: "Portfolio Website",
   desc: "Personal dev portfolio with a code-editor aesthetic built in React.",
   longDesc: "A fully responsive personal portfolio built from scratch using React, React Router and TailwindCSS. Features a dark code-editor aesthetic with syntax-highlighted UI cards, animated code blocks, dynamic project detail pages driven by a single data file, EmailJS contact form with no backend, and a downloadable resume.",
-  tech: ["React 18", "React Router v6", "TailwindCSS v4", "EmailJS", "Fira Code", "Vite", "Vercel"],
+  tech: ["React 18", "React Router v6", "TailwindCSS v4", "EmailJS", "Fira Code", "Lucid-react","Vite", "Vercel"],
   features: [
     "Dark code-editor theme with syntax colours",
     "Syntax-highlighted project cards",
@@ -534,8 +554,8 @@ errorFlows: [
       ],
     },
   ],
-  github: "https://github.com/mayurpanchal-12/portfolio",
-  live: "https://mayurpanchal.dev",
+  github: "https://github.com/mayurpanchal-12/Personal_portfolio_React.js.git",
+  live: "https://personal-portfolio-react-js-psi.vercel.app/",
   status: "Completed",
 },
   ];
