@@ -222,7 +222,7 @@ errorFlows: [
       id: "Advance Todo Manager",
       name: "Advanced Todo Manager",
       desc: "Production-grade React task manager with sidebar navigation, Kanban board, analytics dashboard, calendar view, drag-and-drop, voice input, and full WCAG 2.x accessibility.",
-      // longDesc: "A feature-rich React SPA for task management, built with a collapsible sidebar (focus mode, Notion-style projects, pinned tasks, tag collections, analytics). Supports full CRUD with priority, categories, file attachments, deadlines, subtasks, and markdown notes. Includes a Kanban board with drag-and-drop (Todo → In Progress → Done), a GitHub-style activity heatmap, per-category completion analytics, a calendar view for due dates, and a creative activity history log (added, edited, deleted). Additional features: voice input via Web Speech API, debounced search with inline highlight, CSV/PDF export, dark/light theme persistence via localStorage, and an Error Boundary for render crash recovery. The entire UI is built to WCAG 2.x standards with a full design token system, mobile-first responsive layout, and purpose-driven animations.",
+     
      longDesc: "Feature-rich React SPA for task management with Notion-style UI, Kanban board (drag-and-drop), analytics, calendar, and activity tracking. Supports full CRUD with priorities, tags, deadlines, subtasks, attachments, and markdown notes. Includes voice input, smart search, CSV/PDF export, theme persistence, and WCAG-compliant responsive design.", 
       tech: [
   "React 18",
