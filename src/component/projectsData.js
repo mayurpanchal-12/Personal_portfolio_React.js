@@ -221,117 +221,145 @@ errorFlows: [
     {
       id: "Advance Todo Manager",
       name: "Advanced Todo Manager",
-      desc: "Advanced Todo app with task management, export options, with localStorage ",
-      longDesc: "A feature-richapplication allows CRUD  with advanced options like priority, categories, file attachments, and deadlines. It includes filtering, search, status tracking, and export functionality (PDF/CSV), with persistent data storage using localStorage and a responsive, user-friendly interface.",
+      desc: "Production-grade React task manager with sidebar navigation, Kanban board, analytics dashboard, calendar view, drag-and-drop, voice input, and full WCAG 2.x accessibility.",
+      longDesc: "A feature-rich React SPA for task management, built with a collapsible sidebar (focus mode, Notion-style projects, pinned tasks, tag collections, analytics). Supports full CRUD with priority, categories, file attachments, deadlines, subtasks, and markdown notes. Includes a Kanban board with drag-and-drop (Todo → In Progress → Done), a GitHub-style activity heatmap, per-category completion analytics, a calendar view for due dates, and a creative activity history log (added, edited, deleted). Additional features: voice input via Web Speech API, debounced search with inline highlight, CSV/PDF export, dark/light theme persistence via localStorage, and an Error Boundary for render crash recovery. The entire UI is built to WCAG 2.x standards with a full design token system, mobile-first responsive layout, and purpose-driven animations.",
       tech: [
   "React 18",
   "Vite",
   "Context API",
   "JavaScript (ES6+)",
-  "HTML & Tailwind CSS",
+  "HTML &  CSS",
+  "CSS Custom Properties (Design Tokens)",
+   "Drag and Drop API",
   "localStorage",
   "Vercel",
    "Web Speech API",
    "FileReader API ",
    "jsPDF",
-  "GitHub"
+  "GitHub",
+  "UI/UX Design"
 
 ],
-      features: [
-"CRUD",
-"Set Priority & Category",
-  "Toggle Status",
-  "Filters",
-  "Persistent Storage",
-  "Counts & Clear All",
-  "Export Options",
-  "Search Functionality",
-  "Attach PDF , image",
-  "Voice input"
-],
+
+  features: [
+    "CRUD — add, edit, delete, toggle complete",
+    "Sidebar — focus mode, projects, pinned, tags, analytics, theme, activity history",
+    "Notion-style project workspaces — create and manage projects with color labels",
+    "Pinned tasks — pin any task, view all pinned in sidebar",
+    "Tag collections — group tasks by #tag, browsable from sidebar",
+    "Analytics dashboard — completion rate, GitHub-style activity heatmap, category-wise chart, status overview",
+    "Kanban board — drag-and-drop across Todo / In Progress / Done columns",
+    "Activity history — creative log of all add / edit / delete events with timestamps",
+    "Calendar view — tasks plotted on date-picker calendar by due date",
+    "Subtasks — nested checklist per task with progress bar",
+    "Markdown notes — per-task notes editor with bold, italic, code rendering",
+    "Priority & Category — low / mid / high priority, finance / study / work / other category",
+    "Set Due Date & Time — with overdue detection and red highlight",
+    "Repeat tasks — daily / weekly / monthly recurrence",
+    "Filters — by status (All / Active / Completed / Overdue) and category",
+    "Debounced search — 300ms debounce, highlights matching text inline",
+    "Voice input — Web Speech API fills text field via microphone",
+    "Attach images (max 2MB) and files (max 5MB), up to 5 per task",
+    "Export — filtered todos as CSV or PDF (jsPDF)",
+    "Pomodoro timer — per-task focus timer, bottom-sheet on mobile",
+    "Persistent storage — all data and theme survive page refresh via localStorage",
+    "Dark / Light mode — fully remapped tokens, not just inverted",
+    "Error Boundary — catches render crashes, shows fallback UI with refresh prompt"
+  ],
+
 appFlow: [
-  { text: "Open App → View all Todos grouped by due date" },
-  { text: "↓ Add Todo → text + date + time required", arrow: true },
-  { text: "Set Priority (low / mid / high) + Category (finance / study / work / other)" },
-  { text: "↓ Attach images (max 2MB) or files (max 5MB), up to 5 per todo", arrow: true },
-  { text: "Use voice input 🎤 → Speech Recognition fills text field" },
-  { text: "↓ Todo saved → grouped by date, sorted by priority within group", arrow: true },
-  { text: "Filter by Status (All / Active / Completed / Overdue) or Category" },
-  { text: "↓ Search with debounce → highlights matching text inline", arrow: true },
-  { text: "Edit inline → update text, date, priority, category, attachments" },
-  { text: "↓ Toggle complete → card turns green, strikethrough applied", arrow: true },
-  { text: "Clear Completed → bulk delete all completed todos" },
-  { text: "↓ Download filtered todos as CSV or PDF", arrow: true },
-  { text: "Toggle dark/light mode → persists via localStorage ☀️🌙" },
-],
+    { text: "Open app → sidebar shows focus tasks, today's tasks, projects, pinned, tags, analytics, theme, history" },
+    { text: "↓ Click Focus → see today's high-priority tasks only", arrow: true },
+    { text: "Click Projects → create Notion-style project, assign tasks to it with color label" },
+    { text: "↓ Add task → text + date + time + priority + category + voice input option", arrow: true },
+    { text: "Attach images (max 2MB) or files (max 5MB), up to 5 per task; add subtasks and markdown notes" },
+    { text: "↓ Task saved → grouped by due date, sorted by priority within group", arrow: true },
+    { text: "Switch to Board view → drag tasks across Todo / In Progress / Done columns" },
+    { text: "↓ Switch to Calendar view → tasks plotted on calendar by due date", arrow: true },
+    { text: "Click Analytics → completion rate, GitHub heatmap, category chart, status overview" },
+    { text: "↓ Click History → creative log of every add / edit / delete event with timestamps", arrow: true },
+    { text: "Filter by status or category; debounced search highlights matching text inline" },
+    { text: "↓ Export filtered todos as CSV or PDF; toggle dark/light mode (persists via localStorage)", arrow: true }
+  ],
 
 routes: [
   { icon: "📋", label: "Todo List (Single Page App)" },
 ],
 
-techStack: [
-  { name: "React 18", desc: "useState, useEffect, useRef, useContext — no routing needed" },
-  { name: "Context API", desc: "TodoContext — centralized todos, filters, theme, all CRUD operations" },
-  { name: "TailwindCSS v4", desc: "@custom-variant dark, utility-first with dynamic class composition" },
-  { name: "Web Speech API", desc: "SpeechRecognition for voice-to-text input in TodoForm" },
-  { name: "FileReader API", desc: "Reads image and file attachments as base64 data URLs" },
-  { name: "jsPDF", desc: "Dynamic import from CDN — generates landscape PDF export" },
-  { name: "localStorage", desc: "Todos and theme persisted across refresh via useEffect sync" },
-  { name: "Vite", desc: "Fast dev server and build tool" },
-],
 
-highlights: [
-  { label: "Date Grouping", desc: "Todos grouped by due date with Today / Tomorrow labels, sorted chronologically" },
-  { label: "Priority Sorting", desc: "Within each date group, high → mid → low priority order applied automatically" },
-  { label: "Overdue Detection", desc: "isOverdue() checks dueDate < now for incomplete todos — red card highlight" },
-  { label: "Search Highlight", desc: "highlightText() splits todo text by query and wraps matches in <mark> inline" },
-  { label: "Debounced Search", desc: "300ms debounce on search input via useRef timer — avoids re-filter on every keystroke" },
-  { label: "Attachment System", desc: "Images (max 2MB) and files (max 5MB), up to 5 per todo, stored as base64 in localStorage" },
-  { label: "Voice Input", desc: "Web Speech API with continuous + interim results, stop on form submit or manually" },
-  { label: "Dark Mode", desc: "theme state in context, persisted to localStorage, @custom-variant dark in Tailwind v4" },
-  { label: "Error Boundary", desc: "Wraps TodoList — catches render crashes, shows fallback UI with refresh prompt" },
-  { label: "Download Disabled on Category Filter", desc: "CSV/PDF export blocked when categoryFilter is active to avoid partial data confusion" },
-  {label:"Localstorage" , desc:"data remains after refresh "}
-],
+  techStack: [
+    { name: "React 18", desc: "useState, useEffect, useRef, useContext, Error Boundary — no routing needed" },
+    { name: "Context API", desc: "TodoContext — centralized todos, filters, theme, projects, history, all CRUD" },
+    { name: "CSS Custom Properties", desc: "Full design token system — spacing scale, color palette, typography, radius, shadows" },
+    { name: "Web Speech API", desc: "SpeechRecognition for voice-to-text input in TodoForm" },
+    { name: "Drag and Drop API", desc: "Native browser DnD for Kanban board column transitions" },
+    { name: "FileReader API", desc: "Reads image and file attachments as base64 data URLs" },
+    { name: "jsPDF", desc: "Dynamic CDN import — generates landscape PDF export of filtered tasks" },
+    { name: "localStorage", desc: "Todos, theme, projects, history persisted across refresh via useEffect sync" },
+    { name: "Vite", desc: "Fast dev server and optimized production build tool" }
+  ],
+
+ highlights: [
+    { label: "Sidebar Navigation", desc: "Collapsible sidebar with focus mode, project workspaces, pinned tasks, tag browser, analytics, theme toggle, and activity history — all from one panel" },
+    { label: "Kanban Board", desc: "Drag-and-drop across Todo / In Progress / Done columns using native Drag and Drop API" },
+    { label: "Analytics Dashboard", desc: "Completion rate card, GitHub-style daily entry heatmap, category-wise completion chart, and status overview panel" },
+    { label: "Calendar View", desc: "Tasks plotted on a date-picker calendar by due date — click a date to see tasks due that day" },
+    { label: "Activity History", desc: "Creative chronological log of every add, edit, and delete event with timestamps and diff display" },
+    { label: "Design Token System", desc: "4px spacing scale, semantic color palette with -soft variants, typography scale, and radius tokens via CSS custom properties" },
+    { label: "WCAG 2.x Accessibility", desc: "Skip nav, focus rings, 40px touch targets, ARIA semantics, prefers-reduced-motion, high contrast mode" },
+    { label: "Date Grouping", desc: "Tasks grouped by due date with Today / Tomorrow labels, sorted chronologically" },
+    { label: "Priority Sorting", desc: "Within each date group, high → mid → low priority order applied automatically" },
+    { label: "Overdue Detection", desc: "isOverdue() checks dueDate < now for incomplete tasks — red card accent applied" },
+    { label: "Subtasks & Notes", desc: "Nested subtask checklist with progress bar; per-task markdown notes editor with bold, italic, code rendering" },
+    { label: "Voice Input", desc: "Web Speech API with continuous and interim results, stops on form submit or manually" },
+    { label: "Debounced Search", desc: "300ms debounce on search input via useRef timer, highlights matches inline" },
+    { label: "Attachment System", desc: "Images (max 2MB) and files (max 5MB), up to 5 per task, stored as base64 in localStorage" },
+    { label: "Dark Mode", desc: "All CSS tokens fully remapped for dark — not inverted. Persists via localStorage." },
+    { label: "Error Boundary", desc: "Wraps TodoList — catches render crashes, shows fallback UI with refresh prompt" },
+    { label: "Responsive Design", desc: "Mobile-first breakpoints at 480/640/768/900px; Pomodoro becomes bottom sheet, tabs collapse to icons" },
+    { label: "Export", desc: "CSV and PDF export of filtered todos; blocked when category filter active to avoid partial data" },
+    { label: "localStorage Persistence", desc: "All data, theme, projects, and history survive page refresh" }
+  ],
 
 errorFlows: [
-  {
-    title: "Todo render crash",
-    steps: [
-      { text: "TodoList or TodoItem throws during render" },
-      { text: "Unexpected JS error fires", type: "trigger" },
-      { text: "ErrorBoundary wrapping TodoList catches it" },
-      { text: "'Something went wrong ⚠️' fallback shown", type: "ok" },
-    ],
-  },
-  {
-    title: "Attachment too large",
-    steps: [
-      { text: "User selects file > 5MB (or image > 2MB)" },
-      { text: "file.size > maxSize check fires", type: "trigger" },
-      { text: "File skipped silently in loop" },
-      { text: "Other valid files still attach", type: "ok" },
-    ],
-  },
-  {
-    title: "PDF generation fails",
-    steps: [
-      { text: "User clicks Download → PDF" },
-      { text: "jsPDF CDN import or generation throws", type: "trigger" },
-      { text: "try/catch in downloadTodoPDF catches it" },
-      { text: "'PDF download failed' alert shown", type: "ok" },
-    ],
-  },
-  {
-    title: "Empty download attempt",
-    steps: [
-      { text: "User clicks Download with no visible todos" },
-      { text: "filteredTodos.length === 0", type: "trigger" },
-      { text: "Early guard check fires" },
-      { text: "'No visible todos to download' alert shown", type: "ok" },
-    ],
-  },
-],
+    {
+      title: "Todo render crash",
+      steps: [
+        { text: "TodoItem throws during render" },
+        { text: "JS error fires", type: "trigger" },
+        { text: "ErrorBoundary catches it" },
+        { text: "'Something went wrong' fallback shown", type: "ok" }
+      ]
+    },
+    {
+      title: "Attachment too large",
+      steps: [
+        { text: "User selects file > 5MB or image > 2MB" },
+        { text: "file.size > maxSize check fires", type: "trigger" },
+        { text: "File skipped silently" },
+        { text: "Other valid files still attach", type: "ok" }
+      ]
+    },
+    {
+      title: "PDF generation fails",
+      steps: [
+        { text: "User clicks Download PDF" },
+        { text: "jsPDF import or generation throws", type: "trigger" },
+        { text: "try/catch catches it" },
+        { text: "'PDF download failed' alert shown", type: "ok" }
+      ]
+    },
+    {
+      title: "Empty download attempt",
+      steps: [
+        { text: "User clicks Download with no visible tasks" },
+        { text: "filteredTodos.length === 0", type: "trigger" },
+        { text: "Early guard fires" },
+        { text: "'No visible todos to download' alert shown", type: "ok" }
+      ]
+    }
+  ],
+ 
       github: "https://github.com/mayurpanchal-12/ReactTodo.git",
       live: "https://react-todo-sage-phi.vercel.app/",
       status: "Completed",
@@ -559,3 +587,9 @@ errorFlows: [
   status: "Completed",
 },
   ];
+
+
+
+
+
+  
