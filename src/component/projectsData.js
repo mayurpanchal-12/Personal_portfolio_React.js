@@ -109,7 +109,7 @@ export const projects = [
     {
       id: "Finance Tracker",
       name: "Advanced Finance Tracker",
-      desc: " helps users manage Transactions , future transactions, analytics,budget  and financial news",
+      desc: "helps users manage Transactions , future transactions, analytics,budget  and financial news",
       longDesc:"A full-featured Finance Tracker web app to manage income, expenses, budgets, future transactions, analytics, and financial news in one place. It includes voice input, advanced search/filtering, interactive charts, and CSV/PDF export , PWA support with real-time balance updates. Built using Firebase (Auth + Firestore) and Cloudinary for secure, scalable data and file management. it has RBAC viewer set by admin only see transactions",
       tech: [
   "React.js",
@@ -117,16 +117,14 @@ export const projects = [
   "Tailwind CSS",
   "JavaScript (ES6+)",
   "Browser Speech API",
-  "Chart library",
+  "Chart.js",
   "CSV / PDF export utilities",
-  "Finance News API",
-  "Localstorage",
+  "Alpha Vantage API",
   "Firebase",
   "Cloudinary",
-  "vercel",
-  "github"
+  "Vercel",
 ],
-      features: ["Transaction Management" , "Filter & Search" , "Insights (Income) & Budget " ,"Download-Csv & PDF" ,"PWA" , "Vault", "Schedule Transactions " , "Charts & Analytics" , "Summary" , "notes" , "News" , "Bedget , insights , Skeleton Loading , LAzy + Suspense"],
+      features: ["Transaction Management" , "Filter & Search" , "Insights (Income) & Budget " ,"Download-Csv & PDF" ,"PWA" , "Vault", "Schedule Transactions " , "Charts & Analytics" , "Summary" , "notes" , "News" , "Bedget , insights , Skeleton Loading , Lazy + Suspense"],
      
    appFlow: [
   { text: "Open App → Firebase checks auth state" },
