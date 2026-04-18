@@ -172,7 +172,7 @@ errorFlows: [
     },
     {
       id: "Advance Todo Manager",
-      name: "Advanced Todo Manager",
+      name: "Task Flow",
     desc: "Production-grade React task manager with Kanban board, calendar view, Pomodoro timer, analytics dashboard, voice input, Firebase Auth, Firestore sync, and PWA support.",
 
 longDesc: "Full-featured task management SPA built with React and Context API with real-time Firestore sync and  Firebase Auth. Features drag-and-drop Kanban board, monthly calendar, 28-day activity heatmap, per-task Pomodoro timer, repeating tasks, project workspaces, tag filtering, and CSV/PDF export. Supports voice input , file attachments via Cloudinary, Theme Toggle , PWA.",

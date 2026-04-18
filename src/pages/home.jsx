@@ -12,7 +12,7 @@ export default function Home() {
         <div className="home__left">
           <p className="home__greeting">Hello,</p>
           <h1 className="home__name">Mayur Panchal</h1>
-          <p className="home__title"> Software Developer</p>
+          <p className="home__title"> React Developer</p>
           <div className="home__btn-group">
             <Link
               to="/contact"
@@ -74,12 +74,16 @@ href="/resume.pdf"
                     "Javascript",
                     "React.js",
                     "MySQL",
+                    "Firebase",
+                    "Cloudinary",
                     "Github",
                     "Vercel deployment",
                     "github pages ",
                     "Email.js",
                     "Networking",
                     "Cybersecurity basics",
+                    "PWA integration",
+                    "LocalStorage inetgration"
                   ].map((s, i, arr) => (
                     <span key={s}>
                       <span className="c-value">{s}</span>

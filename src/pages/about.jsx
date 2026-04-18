@@ -56,12 +56,16 @@ export default function About() {
               <span className="c-keyword"> = </span>
               <span className="c-value">"Mayur Panchal"</span>
             </p>
-            <p className="about-page__role">Software Developer</p>
+            <p className="about-page__role">React Developer</p>
             <p className="about-page__bio">
-               Passionate Software Developer with hands-on experience in HTML, CSS, Tailwind CSS, JavaScript, and React.js, focused on creating responsive and user-friendly web applications. Familiar with MySQL, GitHub, and modern deployment tools like Vercel,Github pages  with foundational knowledge in networking and cybersecurity.
+             Passionate React Developer  with hands-on experience building
+  production-grade React applications with Firebase, Firestore,Cloudinary, Context API, and TailwindCSS. Skilled in real-world engineering practices including
+  role-based access control, real-time data sync, PWA support, cloud storage, and performance optimization with code splitting and lazy
+  loading. Familiar with GitHub, Vercel, and modern tooling like Vite.
             </p>
             <div className="about-page__tags">
-              {["React.js","Javascript(ES6+)","Redux Toolkit","Router","Context API","Tailwind Css","Css","Vercel deployment","Email.js", "Github", "html" , "Networking"].map(t => (
+              {["React.js","Javascript(ES6+)","Redux Toolkit","Router","Context API",
+              "Firebase","Cloudinary","Tailwind Css","Css","Vercel deployment","Email.js", "Github", "html" , "Networking"].map(t => (
                 <span key={t} className="about-page__tag">{t}</span>
               ))}
             </div>
