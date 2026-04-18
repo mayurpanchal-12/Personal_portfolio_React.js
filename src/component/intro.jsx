@@ -29,12 +29,11 @@ export default function Intro() {
           </p>
 
           <p className="about__bio">
-            Passionate Software Developer with hands-on experience in HTML, CSS,
-            Tailwind CSS, JavaScript, and React.js, focused on creating
-            responsive and user-friendly web applications. Familiar with MySQL,
-            GitHub, and modern deployment tools like Vercel, with foundational
-            knowledge in networking and cybersecurity.
-          </p>
+  Passionate React Developer  with hands-on experience building
+  production-grade React applications with Firebase, Firestore,Cloudinary, Context API, and TailwindCSS. Skilled in real-world engineering practices including
+  role-based access control, real-time data sync, PWA support, cloud storage, and performance optimization with code splitting and lazy
+  loading. Familiar with GitHub, Vercel, and modern tooling like Vite.
+</p>
 
           <div className="about__tags">
             {[
@@ -44,11 +43,14 @@ export default function Intro() {
               "Javascript",
               "React.js",
               "MySQL",
+              "Firebase",
+              "Cloudinary",
               "Github",
               "Vercel deployment",
               "github pages ",
               "Networking",
               "Cybersecurity basics",
+              "PWA"
             ].map((tag) => (
               <span key={tag} className="about__tag">
                 {tag}
@@ -60,28 +62,33 @@ export default function Intro() {
 <div className="about__toolkit">
   <span className="about__toolkit-comment">{'< toolkit/>'}</span>
   <div className="about__toolkit-groups">
-    {[
-      {
-        key: "ui",
-        label: "UI/UX",
-        items: ["react-toastify", "react-loading-skeleton", "lucide-react", "React-swiper"],
-      },
-      {
-        key: "integrations",
-        label: "Integrations",
-        items: ["EmailJS", "Clipboard API", "FileReader API"],
-      },
-      {
-        key: "advanced",
-        label: "Advanced",
-        items: ["Web Speech API", "Vite PWA", "jsPDF"],
-      },
-      {
-        key: "viz",
-        label: "Visualization",
-        items: ["Chart.js"],
-      },
-    ].map(({ key, label, items }) => (
+   {[
+  {
+    key: "ui",
+    label: "UI/UX",
+    items: ["react-toastify", "react-loading-skeleton", "lucide-react", "React-swiper"],
+  },
+  {
+    key: "integrations",
+    label: "Integrations",
+    items: ["EmailJS", "Clipboard API", "FileReader API", "Cloudinary", "Alpha Vantage API"],
+  },
+  {
+    key: "advanced",
+    label: "Advanced",
+    items: ["Web Speech API", "Vite PWA", "jsPDF", "HTML5 Drag and Drop API", "Firebase Auth", "Firestore"],
+  },
+  {
+    key: "viz",
+    label: "Visualization",
+    items: ["Chart.js"],
+  },
+  {
+    key: "backend",
+    label: "Backend & Storage",
+    items: ["Firebase", "Firestore", "Cloudinary"],
+  },
+].map(({ key, label, items }) => (
       <div key={key} className="about__toolkit-row">
         <span className="about__toolkit-key">{label}</span>
         <span className="about__toolkit-colon">:</span>
@@ -104,7 +111,7 @@ export default function Intro() {
           <div className="about__meta">
             {[
               { label: "education", value: "BSC- Computer Science" },
-              { label: "role", value: "Software Developer" },
+              { label: "role", value: "React Developer" },
             ].map(({ label, value }) => (
               <div key={label} className="about__meta-item">
                 <span className="about__meta-label">{label}:</span>
